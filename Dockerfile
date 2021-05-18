@@ -1,4 +1,4 @@
-FROM nodesource/node:4.0
+FROM node:16-alpine3.11
 
 WORKDIR /usr/src/app/
 RUN mkdir hepipe.js
@@ -14,4 +14,4 @@ RUN npm install
 
 # config.js will be passed as volume
 
-CMD ["/usr/bin/node", "hepipe.js"]
+CMD ["/usr/local/bin/node", "hepipe.js"]
